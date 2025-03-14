@@ -46,7 +46,8 @@
             System.out.println("the indices are " + result[0] + " " + result[1]);
         }
     }*/
-public class Solution {
+//removing values mentioned in variable val
+/*public class Solution {
     public int removeElement(int[] nums, int val) {
         int k = 0;  // Pointer to track the position of valid elements
 
@@ -80,7 +81,40 @@ public class Solution {
             System.out.print(nums[i] + " ");
         }
     }
+}*/
+//JAVA quiz game
+import java.sql.SQLOutput;
+import java.util.Scanner;
+class Solution {
+    public static void main(String[] args) {
+String[] questions = {"total number of alphabets", "what is the last number in number system", "which colour does a blue ink pen gives when writing", "what is the language used in front-end development"};
+String[][] answers  = {{"1. 23","2. 26","3. 32","4. 46"}, {"1. infinity", "2. 10", "3. 12", "4. 13"},{"1. red", "2. green", "3. blue", "4. yellow"},{"1. css", "2. english", "3. malayalam", "4. hindi"}};
+int[] correct = {2,1,3,1};
+int k = 0;
+Scanner sc = new Scanner(System.in);
+for(int i = 0; i< questions.length; i++){
+    System.out.println(questions[i]);
+    for(int j = 0; j< answers.length;j++) {
+        System.out.println(answers[i][j]);
+
+    }
+    System.out.print("enter your guess ");
+        int guess = sc.nextInt();
+        if(guess == correct[i]){
+            System.out.println("correct!!");
+            k++;
+        }
+        else{
+            System.out.println("wrong");
+        }
+
+
+
 }
+        System.out.println("score is "+k);
+}
+}
+
 
 
 
