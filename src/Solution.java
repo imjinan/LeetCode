@@ -84,7 +84,7 @@
 }*/
 //JAVA quiz game
 import java.sql.SQLOutput;
-import java.util.Scanner;
+/*import java.util.Scanner;
 class Solution {
     public static void main(String[] args) {
 String[] questions = {"total number of alphabets", "what is the last number in number system", "which colour does a blue ink pen gives when writing", "what is the language used in front-end development"};
@@ -113,6 +113,52 @@ for(int i = 0; i< questions.length; i++){
 }
         System.out.println("score is "+k);
 }
+}*/
+//rock paper scissor game
+import java.util.Random;
+import java.util.Scanner;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random random = new Random();
+
+        String playAgain;
+
+
+        do{
+            System.out.println("lets play rock paper and scissor with computer");
+            String[] answer = {"rock", "paper", "scissor"};
+            String options;
+            String rand;
+            System.out.print("enter your move ");
+            options = sc.nextLine();
+
+            if (!options.equals("rock") && !options.equals("paper") && !options.equals("scissor")) {
+                System.out.println("invalid");
+            } else {
+                System.out.println("the computer's move is ");
+                rand = answer[random.nextInt(3)];
+                System.out.println(rand);
+                if (options.equals(rand)) {
+                    System.out.println("its a tie");
+                } else if (options.equals("scissor") && rand.equals("paper") ||
+                        options.equals("rock") && rand.equals("scissor") ||
+                        options.equals("paper") && rand.equals("rock")) {
+                    System.out.println("you win");
+                } else {
+                    System.out.println("you lose");
+                }
+            }
+            System.out.println("do you wanna play again?");
+            playAgain = sc.nextLine();
+        }
+
+        while (playAgain.equals("yes"));
+
+            System.out.println("thanks for playing");
+
+
+    }
 }
 
 
